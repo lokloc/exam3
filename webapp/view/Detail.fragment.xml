@@ -1,0 +1,106 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:f="sap.ui.layout.form"
+   >
+   <Dialog
+      id="idDialog"
+      title="직원 상세 정보"
+      type = "Message"
+      >
+      <content>
+        <f:SimpleForm
+            layout="ColumnLayout"
+            columnsXL="2"
+            columnsL="2"
+            columnsM="2"
+        >
+        <core:Title text="기본정보"></core:Title>
+        <Label text="{i18n>columnTextCustomerID}"></Label>
+
+
+
+        <Label text="직원ID"></Label>
+        <Text text="{EmployeeID}"></Text>
+
+        <Label text="호칭"></Label>
+        <Text text="{LastName}"></Text>
+
+        <Label text="이름"></Label>
+        <Text text="{FirstName}"></Text>
+
+        <Label text="직위"></Label>
+        <Text text="{Title}"></Text>
+
+        <Label text="입사일"></Label>
+        <Text text="{
+                            path: 'HireDate',
+                            type: 'sap.ui.model.type.Date',
+                            formatOptions: {
+                                source: {
+                                    pattern: 'yyyy.MM.dd'
+                                    },
+                                pattern: 'yyyy.MM.dd'
+                    }
+                           
+                        }"></Text>
+
+        <Label text="생일"></Label>
+        <Text text="{
+                            path: 'BirthDate',
+                            type: 'sap.ui.model.type.Date',
+                            formatOptions: {
+                                    pattern: 'yyyy-MM-dd'
+                            }
+                        }"></Text>
+
+
+
+        <core:Title text="주소정보"></core:Title>
+        <Label text="{i18n>columnTextCustomerID}"></Label>
+        
+        <Label text="Address"></Label>
+        <Text text="{Address}"></Text>
+
+        <Label text="City"></Label>
+        <Text text="{City}"></Text>
+
+        <Label text="Region"></Label>
+        <Text text="{Region}"></Text>
+
+        <Label text="PostalCode"></Label>
+        <Text text="{PostalCode}"></Text>
+
+        <Label text="Country"></Label>
+        <Text text="{Country}"></Text>
+
+        <Label text="HomePhone"></Label>
+        <Text text="{HomePhone}"></Text>
+
+        <Label text="Extension"></Label>
+        <Text text="{Extension}"></Text>
+
+
+
+
+        </f:SimpleForm>
+        <f:SimpleForm 
+            layout="ResponsiveGridLayout"
+            columnsL="2"
+            columnsM="2"
+        >
+            <Text text="{Notes}"></Text>
+
+        </f:SimpleForm>
+      </content>
+
+      <beginButton>
+        <Button text="닫기"
+                press=".onCloseDialog"
+        ></Button>
+      </beginButton>
+
+
+    </Dialog>
+</core:FragmentDefinition>
+
