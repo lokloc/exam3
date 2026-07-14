@@ -1,12 +1,25 @@
-﻿<!-- codex-summary:start -->
+<!-- codex-summary:start -->
 # exam3
 
 An SAP Fiori application.
 
-## 프로젝트 개요
+## 구현 기능 요약
 
-- 유형: SAPUI5 애플리케이션
-- 주요 패키지: @sap/ux-ui5-tooling, @sap-ux/ui5-middleware-fe-mockserver, @ui5/cli
+### App 화면
+
+- 역할: 화면 정보 표시와 사용자 입력 처리
+
+### 직원 상세 정보 화면
+
+- 역할: 상세 정보 표시·편집, 업무 명령 실행
+- 주요 항목: 기본정보, 직원ID, 호칭, 이름, 직위, 입사일, 생일, 주소정보
+- 사용자 동작: 팝업 또는 화면 닫기 [onCloseDialog]
+
+### Main 화면
+
+- 역할: 목록 조회 및 항목 선택
+- 사용자 동작: 항목 선택 [onSelectChange]
+- 처리 내용: 팝업/다이얼로그를 열어 추가 입력이나 확인을 처리
 
 ## 실행 방법
 
@@ -14,13 +27,6 @@ An SAP Fiori application.
 npm install
 npm start
 ```
-
-## 주요 구조
-
-- `webapp/`: 애플리케이션 소스
-- `webapp/manifest.json`: 앱 설정, 모델, 데이터 소스 및 라우팅
-- `ui5.yaml`: UI5 Tooling 설정
-- `package.json`: 실행 스크립트와 의존성
 
 <!-- codex-summary:end -->
 
@@ -66,6 +72,3 @@ An SAP Fiori application.
 #### Pre-requisites:
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
-
-
-
